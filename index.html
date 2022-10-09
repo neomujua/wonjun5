@@ -1,8 +1,69 @@
 <html>
     <head>
         <title>나의 사이트 만들기</title>
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <h1>안녕하세요!</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#intro">INTRO</a></li>
+                <li><a href="#like">LIKE</a></li>
+            </ul>
+        </nav>
+        <div class="container" id="home">
+            안녕하세요, 저는 이원준입니다.
+        </div>
+        <div class="container" id="intro">
+            <div class="container_half">
+                왼쪽
+            </div>
+            <div class="container_half">
+                오른쪽
+            </div>
+        </div>
+        <div class="container" id="like">
+            <div class="container_title">
+                좋아하는 것
+            </div>
+            <div class="card">
+                <div class="card_image">
+                    <img id="t1" src="data:image/png;base64,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">
+                </div>
+                <div class="card_title">
+                    제목
+                </div>
+                <div class="card_description">
+                    설명
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image">
+                    <img id="t1" src="data:image/png;base64,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">
+                </div>
+                <div class="card_title">
+                    제목
+                </div>
+                <div class="card_description">
+                    설명
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image">
+                    <img id="t1" src="data:image/png;base64,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">
+                </div>
+                <div class="card_title">
+                    제목
+                </div>
+                <div class="card_description">
+                    설명
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-copyright">
+                Copyright 이원준
+            </div>
+        </div>
     </body>
 </html>
